@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas 7-Eleven</title>
+</head>
+<body>
+    <h1>Cadastro para vagas no 7-Eleven</h1>
+    <form method="GET" action="http://arquivo.devmedia.com.br/projeto/requisicao.php">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label>Nome:</label>
+                <input type="text" name="Nome" placeholder="Ex:Bruno da Silva" required>
+            </div>
+            <div>
+                <label>Data de nascimento:</label>
+                <input type="date" name="Data_de_nascimento">
+            </div>
+            <div>
+                <label>Estado:</label>
+                <select name="Estados">
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Parana</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </select>
+            </div>
+            <div>
+                <label>Cidade:</label>
+                <input type="text" name="Cidade" required>
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="Email" placeholder="joao123@gmail.com" required>
+            </div>
+            <div>
+                <label>Telefone:</label>
+                <input type="tel" name="Telefone" placeholder="(99) 99999-9999" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Educação</legend>
+            <div>
+                <label>Qual seu nivel de escolaridade?</label>
+                <input type="radio" value="Ensino Fundamental" name="Escolaridade" checked>
+                <label>Ensino Fundamental</label>
+                <input type="radio" value="Ensino Médio" name="Escolaridade">
+                <label>Ensino Médio</label>
+                <input type="radio" value="Graduado" name="Escolaridade">
+                <label>Graduado</label>
+            </div>
+            <div>
+                <label>Possui cursos adicionais?</label>
+                <input type="radio" value="Sim" name="Cursos">
+                <label>Sim</label>
+                <input type="radio" value="Não" name="Cursos" checked>
+                <label>Não</label>
+            </div>
+            <div>
+                <label>Caso sim, descreva eles abaixo:</label>
+                <textarea name="Cursos_descrição" placeholder="Informatica basica, Excel, etc..." maxlength="50" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Vagas:</legend>
+            <div>
+                <label>Escolha a vaga que pretende:</label>
+                <select>
+                    <option value="Caixa">Caixa</option>
+                    <option value="Repositor">Repositor</option>
+                    <option value="Gerente">Gerente</option>
+                </select>
+                <label>Possui experiencia na vaga?</label>
+                <input type="radio" value="Sim" name="Experiencia_vagas">
+                <label>Sim</label>
+                <input type="radio" value="Não" name="Experiencia_vagas" checked>
+                <label>Não</label>
+            </div>
+        </fieldset>
+        <div>
+            <input type="checkbox" name="Receber_propostas">Deseja que guardemos seus dados para futuras vagas?
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>
